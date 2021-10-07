@@ -23,14 +23,14 @@ Each resampled dataset was then modeled using Logistic Regression and prediction
 Results for Resampling Models to Predict Credit Risk:
 
 * The Logistic Regression Classifier using Random Oversampling is not suitable for high_risk loans as indicated by the low precision score and low f1 score:
-      1. balanced_accuracy_score of 0.647
-      2. low precision score of 0.01
-      3. low f1 score 0.02
+    1. balanced_accuracy_score of 0.647
+    2. low precision score of 0.01
+    3. low f1 score 0.02
 
 * The Logistic Regression Classifier using Synthetic Minority Oversampling Technique (SMOTE) is not suitable for high_risk loans as indicated by the low precision score and low f1 score:
-      1. balanced_accuracy_score of 0.662
-      2. low precision score 0.01
-      3. low f1 score 0.02
+    1. balanced_accuracy_score of 0.662
+    2. low precision score 0.01
+    3. low f1 score 0.02
 
 * The  Logistic Regression Classifier using ClusterCentroids to undersample is not suitable for high_risk loans as indicated by the low precision score and low f1 score:
     1. balanced_accuracy_score of 0.545
