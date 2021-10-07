@@ -8,7 +8,7 @@ The goal of this supervised machine learning problem is to classifiy future (uns
 
 The analysis was composed of two parts: Resampling Models to Predict Credit Risk and Ensemble Classifiers to Predict Credit Risk (each contained in its own Juypter Notebook).
 
-## Part 1: Resampling Models to Predict Credit Risk:
+## Deliverable 1: Use Resampling Models to Predict Credit Risk
 This analysis used multiple techniques (from the imbalanced-learn library) to address the unbalanced nature of the target variable to included Oversampling, Undersampling and a Combination to the two.
 
 * The RandomOverSampler module was used to to oversample the minority class to generate new "high_risk" loan cases by randomly sampling with replacement the current available samples.
@@ -22,12 +22,21 @@ Results for Resampling Models to Predict Credit Risk:
 * The Logistic Regression Classifier using Random Oversampling had a balanced_accuracy_score of 0.647; however, it is not suitable for high_risk loans as indicated by the low precision score (0.01) and low f1 score (0.02)
 * The Logistic Regression Classifier using Synthetic Minority Oversampling Technique (SMOTE) had a balanced_accuracy_score of 0.662; however, it was not suitable for high_risk loans as indicated by the low percision score(0.01) and low f1 score (0.02)
 * The  Logistic Regression Classifier using ClusterCentroids to undersample had a balanced_accuracy_score of 0.545; however it is not suitable for high_risk loans as indicated by the low percision score (0.01) and low f1 score (0.01)
-* The Logistic Regression Classifier using the SMOTEENN algorithm combining over- and undersampling methods had a balanced_accuracy_score of  0.630; however, it is not suitable for high_risk loans as indicated by the low percision score (0.01) and low f1 score (0.02)
-  
 
 Summary for Resampling Models to Predict Credit Risk: No technique of oversampling, undersampling or a combination was found to addequaltely addressed this unbalanced classification problem using a Logistic Regression Model therefore there is no model recommendation.
 
-## Part 2: Ensemble Classifiers to Predict Credit Risk
+## Deliverable 2: Use the SMOTEENN algorithm to Predict Credit Risk 
+
+This analysis used the SMOTEENN technique (from the imbalanced-learn library) to address the unbalanced nature of the target variable. The SMOTE technique used in part one is known to generate noisy samples by interpolating new points between marginal outliers and inliers. This issue can be solved using the SMOTEENN technique which cleans the space resulting from over-sampling.
+
+The resampled dataset was modeled using Logistic Regression and predictions from the model were assessed using a balanced accuracy score, a confusion matrix and an imbalanced classification report.
+
+Results for Resampling Models to Predict Credit Risk:
+
+* The Logistic Regression Classifier using the SMOTEENN algorithm combining over- and undersampling methods had a balanced_accuracy_score of  0.630; however, it is not suitable for high_risk loans as indicated by the low percision score (0.01) and low f1 score (0.02)
+  
+
+## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
 This part of the analysis used the BalancedRandomForestClassifier and EasyEnsembleClassifier modules(from the imbalanced-learn library) to avoid the pitfalls of favoring the majority classes by allowing for the balancing of each subset of data.
 
 Results for Ensemble Classifiers to Predict Credit Risk: 
