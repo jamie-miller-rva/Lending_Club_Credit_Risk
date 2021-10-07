@@ -62,13 +62,7 @@ Results for Ensemble Classifiers to Predict Credit Risk:
     1. balanced_accuracy_score was 0.789
     2. low precision score 0.03
     3. low f1 score 0.06
-   
-
-    Top ten features (by feature importance)
-    
-
-    ![feature importance](./Images/BalancedRandomForestClassifier_feature_importance.png)
-    
+       
   
 * EasyEnsembleClassifier uses AdaBoostClassifier as learners which are trained on balanced bootstrap samples. However, the EasyEnsembleClassifier is not suitable for high_risk loans as indicated by the low precision score and low f1 score
     1. The balanced_accuracy_score was 0.932
