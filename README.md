@@ -19,9 +19,20 @@ Each resampled dataset was then modeled using Logistic Regression and prediction
 
 Results for Resampling Models to Predict Credit Risk:
 
-* The Logistic Regression Classifier using Random Oversampling had a balanced_accuracy_score of 0.647; however, it is not suitable for high_risk loans as indicated by the low precision score (0.01) and low f1 score (0.02)
-* The Logistic Regression Classifier using Synthetic Minority Oversampling Technique (SMOTE) had a balanced_accuracy_score of 0.662; however, it was not suitable for high_risk loans as indicated by the low percision score(0.01) and low f1 score (0.02)
-* The  Logistic Regression Classifier using ClusterCentroids to undersample had a balanced_accuracy_score of 0.545; however it is not suitable for high_risk loans as indicated by the low percision score (0.01) and low f1 score (0.01)
+* The Logistic Regression Classifier using Random Oversampling is not suitable for high_risk loans as indicated by the low precision score and low f1 score:
+      1. balanced_accuracy_score of 0.647
+      2. low precision score of 0.01
+      3. low f1 score 0.02
+   
+* The Logistic Regression Classifier using Synthetic Minority Oversampling Technique (SMOTE) is not suitable for high_risk loans as indicated by the low percision score and low f1 score:
+      1. balanced_accuracy_score of 0.662
+      2. low percision score 0.01
+      3. low f1 score 0.02
+
+* The  Logistic Regression Classifier using ClusterCentroids to undersample is not suitable for high_risk loans as indicated by the low percision score and low f1 score:
+    1. balanced_accuracy_score of 0.545
+    2. low percision score 0.01
+    3. low f1 score 0.01
 
 Summary for Resampling Models to Predict Credit Risk: No technique of oversampling, undersampling or a combination was found to addequaltely addressed this unbalanced classification problem using a Logistic Regression Model therefore there is no model recommendation.
 
@@ -33,7 +44,10 @@ The resampled dataset was modeled using Logistic Regression and predictions from
 
 Results for Resampling Models to Predict Credit Risk:
 
-* The Logistic Regression Classifier using the SMOTEENN algorithm combining over- and undersampling methods had a balanced_accuracy_score of  0.630; however, it is not suitable for high_risk loans as indicated by the low percision score (0.01) and low f1 score (0.02)
+* The Logistic Regression Classifier using the SMOTEENN algorithm combining over- and undersampling methods is not suitable for high_risk loans as indicated by the low percision score and low f1 score:
+    1. balanced_accuracy_score of  0.630
+    2. low percision score 0.01
+    3. low f1 score 0.02
   
 
 ## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
@@ -41,13 +55,14 @@ This part of the analysis used the BalancedRandomForestClassifier and EasyEnsemb
 
 Results for Ensemble Classifiers to Predict Credit Risk: 
 
-* BalancedRandomForestClassifier is an ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. The balanced_accuracy_score was 0.789; however, it is not suitable for high_risk loans as indicated by the low precision score (0.03) and low f1 score (0.06)
+* BalancedRandomForestClassifier is an ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. However, it is not suitable for high_risk loans as indicated by the low precision score and low f1 score:
+    1. balanced_accuracy_score was 0.789
+    2. low precision score 0.03
+    3. low f1 score 0.06
+  
 * EasyEnsembleClassifier uses AdaBoostClassifier as learners which are trained on balanced bootstrap samples. The balanced_accuracy_score was 0.932; however, it is not suitable for high_risk loans as indicated by the low precision score (0.09) and low f1 score (0.16)
+    1. The balanced_accuracy_score was 0.932
+    2. low precision score 0.09
+    3. low f1 score 0.16
 
-Summary for Ensemble Classifiers to Predict Credit Risk: No technique of bagging or boosting was found to addequaltely addressed this unbalanced classification problem therefore there is no model recommendation.
-
-
-
-
-
-
+Summary for Ensemble Classifiers to Predict Credit Risk: No technique of bagging or boosting was found to addequaltely addressed this unbalanced classification problem therefore there is no model recommendation. However, if marginal improvement is sought through machine learning then the EasyEnsembleClassifier offered the greatest improvement of the models reviewed in this analysis.
